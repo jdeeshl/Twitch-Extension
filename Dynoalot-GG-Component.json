@@ -1,56 +1,8 @@
 {
   "allowHttpBackend": false,
   "backendCommand": "",
-  "backendFolderName": "",
+  "backendFolderName": "/home/andredifelice/Twitch-Extension/server",
   "certificateExceptions": [
-    {
-      "isAllowed": true,
-      "isEphemeral": false,
-      "isOrigin": true,
-      "value": "https://localhost:8080"
-    },
-    {
-      "isAllowed": true,
-      "isEphemeral": false,
-      "isOrigin": true,
-      "value": "wss://localhost:8080"
-    },
-    {
-      "isAllowed": true,
-      "isEphemeral": false,
-      "isOrigin": true,
-      "value": "https://localhost:8080"
-    },
-    {
-      "isAllowed": true,
-      "isEphemeral": false,
-      "isOrigin": true,
-      "value": "wss://localhost:8080"
-    },
-    {
-      "isAllowed": true,
-      "isEphemeral": false,
-      "isOrigin": true,
-      "value": "https://localhost:8080"
-    },
-    {
-      "isAllowed": true,
-      "isEphemeral": false,
-      "isOrigin": true,
-      "value": "wss://localhost:8080"
-    },
-    {
-      "isAllowed": true,
-      "isEphemeral": false,
-      "isOrigin": true,
-      "value": "https://localhost:8080"
-    },
-    {
-      "isAllowed": true,
-      "isEphemeral": false,
-      "isOrigin": true,
-      "value": "wss://localhost:8080"
-    },
     {
       "isAllowed": true,
       "isEphemeral": false,
@@ -66,7 +18,7 @@
   ],
   "extensionViews": [
     {
-      "id": "2",
+      "id": "1",
       "label": "main",
       "channelId": "265737932",
       "configurationAnchor": "panel",
@@ -144,7 +96,7 @@
     "whitelistedPanelUrls": []
   },
   "frontendCommand": "npm start",
-  "frontendFolderName": "/home/andredifelice/Twitch-Extension/extensions-boilerplate/",
-  "name": "Dynoalot-GG-Chat",
+  "frontendFolderName": "/home/andredifelice/Twitch-Extension/client",
+  "name": "Dynoalot-GG-Component",
   "version": 1
 }

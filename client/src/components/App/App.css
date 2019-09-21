@@ -1,5 +1,11 @@
 .App {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    position: relative;
 }
 
 .App-light{
@@ -8,4 +14,39 @@
 
 .App-dark{
     color:#e5e3e8;
+}
+
+button {
+    font-size: 1em;
+    background-color: tomato;
+    color: #fff;
+    padding: 1em;
+}
+
+.btn-wrapper {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.playground {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 100%;
 }
