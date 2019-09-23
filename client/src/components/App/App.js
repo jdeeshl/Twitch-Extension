@@ -4,14 +4,29 @@ import pose from 'react-pose';
 
 import './App.css'
 
+const ButtonWrapper = pose.div({
+    hidden: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1
+    }
+})
+
 const Box = pose.div({
+
     hidden: {
         opacity: 0,
         scale: 1
     }, 
     visible: {
         opacity: 1,
-        scale: 10,
+        scale: 5,
+        transition: {
+            type: 'spring',
+            stiffness: 150,
+            damping: 2
+          }
     }
 });
 
@@ -20,10 +35,18 @@ export default class App extends React.Component{
         super(props)
         this.Authentication = new Authentication()
         this.handleButtonClick = this.handleButtonClick.bind(this);
-
+        this.toggleBtnWrapper = this.toggleBtnWrapper.bind(this);
+        this.products = {
+            "000": "GG Bro" ,
+            "001": "NH Bro",
+            "002": "WP Bro",
+            "003": "emoji"
+        }
         //if the extension is running on twitch or dev rig, set the shorthand here. otherwise, set to null. 
         this.twitch = window.Twitch ? window.Twitch.ext : null
         this.state={
+            selectedSKU: "",
+            showBtnWrapper: false,
             showAnimation: false,
             products: [],
             finishedLoading:false,
@@ -106,28 +129,42 @@ export default class App extends React.Component{
         }
     }
 
-    handleButtonClick(e) {
-        const {sku} = e.target.dataset;
+    handleButtonClick(sku) {
+        // const {sku} = e.target.dataset;
         this.twitch.rig.log(sku);
         this.twitch.bits.useBits(sku);
         this.setState({
             showAnimation: true,
+            selectedSKU: sku,
         }, () => {
             setTimeout(() => {
                 this.setState({
                     showAnimation: false
                 })
-            }, 2000)
+            }, 2500)
         })
     }
+
+    toggleBtnWrapper() {
+        this.twitch.rig.log('working');
+        this.setState((prevState) => {
+            return {
+                showBtnWrapper: !prevState.showBtnWrapper
+            }
+        })
+    }
+
     
     render(){
         if(this.state.finishedLoading && this.state.isVisible){
+            this.twitch.rig.log("selectedSKU", this.state.selectedSKU)
+
             return (
+                
                 <div className="App">
                     {
                         this.state.products.map((product) => {
-                            console.log(': ', product);
+                            // console.log(': ', product);
                             return (
                                 <button 
                                     onClick={this.handleButtonClick} 
@@ -140,20 +177,49 @@ export default class App extends React.Component{
                         })
                     }
                     <div className="playground">
-                        <Box className="box" pose={this.state.showAnimation ? "visible" : "hidden" }></Box>
+                        <Box className="box" pose={this.state.showAnimation ? "visible" : "hidden" }>
+                            <span>{this.products[this.state.selectedSKU]}</span>
+                        </Box>
                     </div>
-                    <div className="btn-wrapper">
-                        <button 
-                            onClick={this.handleButtonClick} 
-                            data-sku={'item'}
-                            >
-                            <span>{'Emoji'}</span>
-                            <span>{'100'}</span>
-                        </button>
-                        <button onClick={this.handleButtonClick} name="button2">GG Bro 👊</button>
-                        <button onClick={this.handleButtonClick} name="button3">WP 👏</button>
-                        <button onClick={this.handleButtonClick} name="button4">NH 👌</button>
+                    <div className="money-btn-wrapper">
+                        <ButtonWrapper className="btn-wrapper" pose={this.state.showBtnWrapper ? "visible" : "hidden" }>
+                            <button 
+                                onClick={() => {
+                                    this.handleButtonClick("000")
+                                }} 
+                                >
+                                <span>{'10 bits: '}</span>
+                                <span>{'Emoji'}</span>
+                            </button>
+                            <button 
+                                onClick={() => {
+                                    this.handleButtonClick("001")
+                                }}   
+                                >
+                                <span>{'25 bits: '}</span>
+                                <span>{'Emoji'}</span>
+                            </button>
+                            <button 
+                                onClick={() => {
+                                    this.handleButtonClick("002")
+                                }} 
+                                >
+                                <span>{'50 bits: '}</span>
+                                <span>{'Emoji'}</span>
+                                
+                            </button>
+                            <button 
+                                onClick={() => {
+                                    this.handleButtonClick("003")
+                                }} 
+                                >
+                                <span>{'100 bits: '}</span>
+                                <span>{'Emoji'}</span>
+                            </button>
+                        </ButtonWrapper>
+                        <button className="rain-btn" onClick={this.toggleBtnWrapper}>Make it rain 💰</button>
                     </div>
+
                     {/* <div className={this.state.theme === 'light' ? 'App-light' : 'App-dark'} >
                         <p>Hello world!</p>
                         <p>My token is: {this.Authentication.state.token}</p>
