@@ -1166,6 +1166,72 @@
       "isEphemeral": false,
       "isOrigin": false,
       "value": "wss://localhost:8080/sockjs-node/973/pvakpwqd/websocket"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": false,
+      "value": "wss://localhost:8080/sockjs-node/132/x3zqaxwi/websocket"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
     }
   ],
   "extensionViews": [

@@ -24,7 +24,7 @@ const Box = pose.div({
         scale: 5,
         transition: {
             type: 'spring',
-            stiffness: 150,
+            stiffness: 120,
             damping: 2
           }
     }
@@ -37,10 +37,10 @@ export default class App extends React.Component{
         this.handleButtonClick = this.handleButtonClick.bind(this);
         this.toggleBtnWrapper = this.toggleBtnWrapper.bind(this);
         this.products = {
-            "000": "GG Bro" ,
-            "001": "NH Bro",
-            "002": "WP Bro",
-            "003": "emoji"
+            "000": "GG bro 👊" ,
+            "001": "NH sir 🧐",
+            "002": "WP buddy 🐳",
+            "003": "💩" 
         }
         //if the extension is running on twitch or dev rig, set the shorthand here. otherwise, set to null. 
         this.twitch = window.Twitch ? window.Twitch.ext : null
@@ -189,7 +189,7 @@ export default class App extends React.Component{
                                 }} 
                                 >
                                 <span>{'10 bits: '}</span>
-                                <span>{'Emoji'}</span>
+                                <span>{'GG'}</span>
                             </button>
                             <button 
                                 onClick={() => {
@@ -197,7 +197,7 @@ export default class App extends React.Component{
                                 }}   
                                 >
                                 <span>{'25 bits: '}</span>
-                                <span>{'Emoji'}</span>
+                                <span>{'NH'}</span>
                             </button>
                             <button 
                                 onClick={() => {
@@ -205,7 +205,7 @@ export default class App extends React.Component{
                                 }} 
                                 >
                                 <span>{'50 bits: '}</span>
-                                <span>{'Emoji'}</span>
+                                <span>{'WP'}</span>
                                 
                             </button>
                             <button 
@@ -214,10 +214,10 @@ export default class App extends React.Component{
                                 }} 
                                 >
                                 <span>{'100 bits: '}</span>
-                                <span>{'Emoji'}</span>
+                                <span>{'Poo'}</span>
                             </button>
                         </ButtonWrapper>
-                        <button className="rain-btn" onClick={this.toggleBtnWrapper}>Make it rain 💰</button>
+                        <button className="rain-btn" onClick={this.toggleBtnWrapper}>Make it rain 💸</button>
                     </div>
 
                     {/* <div className={this.state.theme === 'light' ? 'App-light' : 'App-dark'} >
