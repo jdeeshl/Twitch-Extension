@@ -253,6 +253,7 @@ export default class App extends React.Component{
             )
         } else {
             return (
+                
                 <div className="App">
                     {this.state.shouldPlaySound && <Sound url={
                         `../../assets/${this.state.soundFileName}`} 
@@ -315,7 +316,7 @@ export default class App extends React.Component{
                                     this.handleButtonClick("003")
                                 }} 
                                 >
-                                <span>{'💩'}</span>
+                                <span className="poo">{'💩'}</span>
                                 <br/>
                                 <span>{'100 bits'}</span>
                             </button>
