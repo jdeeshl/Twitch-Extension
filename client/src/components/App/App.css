@@ -21,7 +21,7 @@ button:focus {
 }
 
 button {
-    font-size: .5em;
+    font-size: .75em;
     background-color: #6441a4;
     color: #fff;
     padding: 1em;
@@ -76,5 +76,6 @@ button {
     border-radius: 45% 45% 0 0;
     /* border: 1px solid; */
     border: none;
+    font-size: 1em;
 }
 

@@ -38,7 +38,8 @@
     "popmotion": "^8.7.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-pose": "^4.0.8"
+    "react-pose": "^4.0.8",
+    "react-sound": "^1.2.0"
   },
   "babel": {
     "presets": [

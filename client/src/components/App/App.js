@@ -1,8 +1,16 @@
 import React from 'react'
 import Authentication from '../../util/Authentication/Authentication'
 import pose from 'react-pose';
+import Sound from 'react-sound';
 
 import './App.css'
+
+const skuToSound = {
+    "000":"Catapult-SoundBible.com-829548288.mp3",
+    "001":"Throw_Knife-Anonymous-1894795848.mp3",
+    "002":"Snow Ball Throw And Splat-SoundBible.com-992042947.mp3",
+    "003":"Puking_Or_Fighting-Puke_Man-1368560516.mp3"
+}
 
 const ButtonWrapper = pose.div({
     hidden: {
@@ -45,6 +53,8 @@ export default class App extends React.Component{
         //if the extension is running on twitch or dev rig, set the shorthand here. otherwise, set to null. 
         this.twitch = window.Twitch ? window.Twitch.ext : null
         this.state={
+            shouldPlaySound: false,
+            soundFileName: "",
             selectedSKU: "",
             showBtnWrapper: false,
             showAnimation: false,
@@ -136,6 +146,8 @@ export default class App extends React.Component{
         this.setState({
             showAnimation: true,
             selectedSKU: sku,
+            shouldPlaySound: true,
+            soundFileName: skuToSound[sku]
         }, () => {
             setTimeout(() => {
                 this.setState({
@@ -162,6 +174,14 @@ export default class App extends React.Component{
             return (
                 
                 <div className="App">
+                    {this.state.shouldPlaySound && <Sound url={
+                        `../../assets/${this.state.soundFileName}`} 
+                    playStatus={Sound.status.PLAYING} 
+                    onFinishedPlaying={
+                        ()=>this.setState({
+                            shouldPlaySound:false
+                        })}
+                    />}
                     {
                         this.state.products.map((product) => {
                             // console.log(': ', product);
@@ -189,7 +209,7 @@ export default class App extends React.Component{
                                 }} 
                                 >
                                 <span>{'10 bits: '}</span>
-                                <span>{'GG'}</span>
+                                <span>{'GG 👊'}</span>
                             </button>
                             <button 
                                 onClick={() => {
@@ -197,7 +217,7 @@ export default class App extends React.Component{
                                 }}   
                                 >
                                 <span>{'25 bits: '}</span>
-                                <span>{'NH'}</span>
+                                <span>{'NH 🧐'}</span>
                             </button>
                             <button 
                                 onClick={() => {
@@ -205,7 +225,7 @@ export default class App extends React.Component{
                                 }} 
                                 >
                                 <span>{'50 bits: '}</span>
-                                <span>{'WP'}</span>
+                                <span>{'WP 🐳'}</span>
                                 
                             </button>
                             <button 
@@ -214,7 +234,7 @@ export default class App extends React.Component{
                                 }} 
                                 >
                                 <span>{'100 bits: '}</span>
-                                <span>{'Poo'}</span>
+                                <span>{'💩'}</span>
                             </button>
                         </ButtonWrapper>
                         <button className="rain-btn" onClick={this.toggleBtnWrapper}>Make it rain 💸</button>

@@ -1232,6 +1232,198 @@
       "isEphemeral": false,
       "isOrigin": true,
       "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": false,
+      "value": "https://localhost:8080/assets/Catapult-SoundBible.com-829548288.mp3"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "https://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": false,
+      "value": "wss://localhost:8080/sockjs-node/492/oscd4ked/websocket"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": true,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
     }
   ],
   "extensionViews": [
