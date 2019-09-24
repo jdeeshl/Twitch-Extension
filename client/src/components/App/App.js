@@ -3,7 +3,7 @@ import Authentication from '../../util/Authentication/Authentication'
 import pose from 'react-pose';
 import Sound from 'react-sound';
 
-import './App.css'
+import './App.css';
 
 const skuToSound = {
     "000":"Catapult-SoundBible.com-829548288.mp3",
@@ -48,7 +48,7 @@ export default class App extends React.Component{
             "000": "GG bro 👊" ,
             "001": "NH sir 🧐",
             "002": "WP buddy 🐳",
-            "003": "💩" 
+            "003": "💩💩💩" 
         }
         //if the extension is running on twitch or dev rig, set the shorthand here. otherwise, set to null. 
         this.twitch = window.Twitch ? window.Twitch.ext : null
@@ -82,33 +82,35 @@ export default class App extends React.Component{
     }
 
     componentDidMount(){
+        
         if(this.twitch){
             this.twitch.onAuthorized((auth)=>{
+                console.log('this.twitch: ', this.twitch);
                 this.Authentication.setToken(auth.token, auth.userId)
-                this.twitch.bits.getProducts().then((products) => {
-                    // this.twitch.rig.log(products);
-                    if(!this.state.finishedLoading){
-                        // if the component hasn't finished loading (as in we've not set up after getting a token), let's set it up now.
+                // this.twitch.bits.getProducts().then((products) => {
+                //     // this.twitch.rig.log(products);
+                //     if(!this.state.finishedLoading){
+                //         // if the component hasn't finished loading (as in we've not set up after getting a token), let's set it up now.
     
-                        // now we've done the setup for the component, let's set the state to true to force a rerender with the correct data.
-                        this.setState(()=>{
-                            return {
-                                products,
-                                finishedLoading:true
-                            }
-                        })
-                    }
-                }).catch((error) => {
-                    console.log('error: ', error);
-                })
-                // if(!this.state.finishedLoading){
-                //     // if the component hasn't finished loading (as in we've not set up after getting a token), let's set it up now.
+                //         // now we've done the setup for the component, let's set the state to true to force a rerender with the correct data.
+                //         this.setState(()=>{
+                //             return {
+                //                 products,
+                //                 finishedLoading:true
+                //             }
+                //         })
+                //     }
+                // }).catch((error) => {
+                //     console.log('error: ', error);
+                // })
+                if(!this.state.finishedLoading){
+                    // if the component hasn't finished loading (as in we've not set up after getting a token), let's set it up now.
 
-                //     // now we've done the setup for the component, let's set the state to true to force a rerender with the correct data.
-                //     this.setState(()=>{
-                //         return {finishedLoading:true}
-                //     })
-                // }
+                    // now we've done the setup for the component, let's set the state to true to force a rerender with the correct data.
+                    this.setState(()=>{
+                        return {finishedLoading:true}
+                    })
+                }
             })
 
             this.twitch.listen('broadcast',(target,contentType,body)=>{
@@ -252,6 +254,74 @@ export default class App extends React.Component{
         } else {
             return (
                 <div className="App">
+                    {this.state.shouldPlaySound && <Sound url={
+                        `../../assets/${this.state.soundFileName}`} 
+                    playStatus={Sound.status.PLAYING} 
+                    onFinishedPlaying={
+                        ()=>this.setState({
+                            shouldPlaySound:false
+                        })}
+                    />}
+                    {
+                        this.state.products.map((product) => {
+                            // console.log(': ', product);
+                            return (
+                                <button 
+                                    onClick={this.handleButtonClick} 
+                                    data-sku={products.sku}
+                                    >
+                                    <span>{product.displayName}</span>
+                                    <span>{product.cost.amount}</span>
+                                </button>
+                            )
+                        })
+                    }
+                    <div className="playground">
+                        <Box className="box" pose={this.state.showAnimation ? "visible" : "hidden" }>
+                            <span>{this.products[this.state.selectedSKU]}</span>
+                        </Box>
+                    </div>
+                    <div className="money-btn-wrapper">
+                        <ButtonWrapper className="btn-wrapper" pose={this.state.showBtnWrapper ? "visible" : "hidden" }>
+                            <button 
+                                onClick={() => {
+                                    this.handleButtonClick("000")
+                                }} 
+                                >
+                                <span>{'GG 👊'}</span>
+                                <br/>
+                                <span>{'10 bits'}</span>
+                            </button>
+                            <button 
+                                onClick={() => {
+                                    this.handleButtonClick("001")
+                                }}   
+                                >
+                                <span>{'NH 🧐'}</span>
+                                <br/>
+                                <span>{'25 bits'}</span>
+                            </button>
+                            <button 
+                                onClick={() => {
+                                    this.handleButtonClick("002")
+                                }} 
+                                >
+                                <span>{'WP 🐳'}</span>
+                                <br/>
+                                <span>{'50 bits'}</span>
+                            </button>
+                            <button 
+                                onClick={() => {
+                                    this.handleButtonClick("003")
+                                }} 
+                                >
+                                <span>{'💩'}</span>
+                                <br/>
+                                <span>{'100 bits'}</span>
+                            </button>
+                        </ButtonWrapper>
+                        <button className="rain-btn" onClick={this.toggleBtnWrapper}>Make it rain <span>💵</span></button>
+                    </div>
                 </div>
             )
         }

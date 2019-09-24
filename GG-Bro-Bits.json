@@ -290,6 +290,12 @@
       "isEphemeral": false,
       "isOrigin": true,
       "value": "wss://localhost:8080"
+    },
+    {
+      "isAllowed": false,
+      "isEphemeral": false,
+      "isOrigin": true,
+      "value": "wss://localhost:8080"
     }
   ],
   "extensionViews": [

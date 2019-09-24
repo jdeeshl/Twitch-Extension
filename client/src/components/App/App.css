@@ -21,10 +21,13 @@ button:focus {
 }
 
 button {
-    font-size: .75em;
+    font-size: .65em;
     background-color: #6441a4;
     color: #fff;
-    padding: 1em;
+    padding: .5em;
+    border-radius: 50%;
+    border: none;
+    margin: 5px;
 }
 
 .btn-wrapper {
@@ -79,3 +82,10 @@ button {
     font-size: 1em;
 }
 
+button :first-child {
+    font-size: 2em;
+}
+
+button :nth-child(2) {
+    font-size: 2em;
+}
