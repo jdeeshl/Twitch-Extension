@@ -18,7 +18,7 @@ const ButtonWrapper = pose.div({
     },
     visible: {
         opacity: 1
-    }
+    } 
 })
 
 const Box = pose.div({
@@ -150,8 +150,8 @@ export default class App extends React.Component{
             selectedSKU: sku,
             shouldPlaySound: true,
             soundFileName: skuToSound[sku]
-        }, () => {
-            setTimeout(() => {
+        }, ()=>{
+            setTimeout(()=>{
                 this.setState({
                     showAnimation: false
                 })
@@ -161,13 +161,12 @@ export default class App extends React.Component{
 
     toggleBtnWrapper() {
         this.twitch.rig.log('working');
-        this.setState((prevState) => {
+        this.setState((prevState)=>{
             return {
                 showBtnWrapper: !prevState.showBtnWrapper
             }
         })
     }
-
     
     render(){
         if(this.state.finishedLoading && this.state.isVisible){
@@ -264,7 +263,7 @@ export default class App extends React.Component{
                         })}
                     />}
                     {
-                        this.state.products.map((product) => {
+                        this.state.products.map((product)=>{
                             // console.log(': ', product);
                             return (
                                 <button 
@@ -285,7 +284,7 @@ export default class App extends React.Component{
                     <div className="money-btn-wrapper">
                         <ButtonWrapper className="btn-wrapper" pose={this.state.showBtnWrapper ? "visible" : "hidden" }>
                             <button 
-                                onClick={() => {
+                                onClick={()=>{
                                     this.handleButtonClick("000")
                                 }} 
                                 >
@@ -294,7 +293,7 @@ export default class App extends React.Component{
                                 <span>{'10 bits'}</span>
                             </button>
                             <button 
-                                onClick={() => {
+                                onClick={()=>{
                                     this.handleButtonClick("001")
                                 }}   
                                 >
@@ -303,7 +302,7 @@ export default class App extends React.Component{
                                 <span>{'25 bits'}</span>
                             </button>
                             <button 
-                                onClick={() => {
+                                onClick={()=>{
                                     this.handleButtonClick("002")
                                 }} 
                                 >
@@ -312,7 +311,7 @@ export default class App extends React.Component{
                                 <span>{'50 bits'}</span>
                             </button>
                             <button 
-                                onClick={() => {
+                                onClick={()=>{
                                     this.handleButtonClick("003")
                                 }} 
                                 >

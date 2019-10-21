@@ -105,7 +105,7 @@ module.exports = (_env,argv)=> {
       headers: {
         'Access-Control-Allow-Origin': '*'
       },
-      port: 8080
+      port: 5000
     }
     config.devServer.https = false
   }
