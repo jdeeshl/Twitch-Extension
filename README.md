@@ -19,7 +19,7 @@ Twitch Bits are effectively mini-donations from viewers. They pay for them using
    cd client
    ```
 
-2. Install frontend dependencies and start.
+2. Install frontend dependencies, start and then visit the URL.
 
    ```bash
    npm install
