@@ -1,7 +1,7 @@
 # GG Bro
 
 <p align="center">
-  <img src="./client/public/assets/project-featured.png" />
+  <img src="client/public/assets/project-featured.jpg" />
 </p>
 
 GG Bro is an interactive way for twitch followers to donate to their favorite streamers! With just a simple click you can throw emojis for Twitch Bits onto the screen with fun sounds and animations go along with it. 
