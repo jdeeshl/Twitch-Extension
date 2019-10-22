@@ -1,7 +1,7 @@
 # GG Bro
 
 <p align="center">
-  <img src="./client/src/assets/logo+slogan-even-smaller.png" />
+  <img src="./client/public/assets/project-featured.png" />
 </p>
 
 GG Bro is an interactive way for twitch followers to donate to their favorite streamers! With just a simple click you can throw emojis for Twitch Bits onto the screen with fun sounds and animations go along with it. 
@@ -48,8 +48,4 @@ Twitch Bits are effectively mini-donations from viewers. They pay for them using
 
 ## Developer Team
 
-<<<<<<< HEAD
 * Andre DiFelice - [GitHub](https://github.com/dynoalot) - [LinkedIn](https://www.linkedin.com/in/difelice/) 🧟‍
-=======
-* Andre DiFelice - [GitHub](https://github.com/dynoalot) - [LinkedIn](https://www.linkedin.com/in/difelice/) 🧟‍
->>>>>>> 905e77b68421952bc2f6a36e0f9d0995704a8201
