@@ -10,19 +10,6 @@ What are Twitch Bits?
 
 Twitch Bits are effectively mini-donations from viewers. They pay for them using either Amazon Payments or PayPal. Bits are a type of virtual currency that gamers can “spend” on their favorite gamers’ sites. Twitch pays their Affiliates and Partners one cent for every Bit fans use on their channels.
 
-## Screenshots
-
-<p align="center">
-  <img src="./client/src/assets/Reusabol-mockup.png" />
-</p>
-
-## Demo
-
-<span style="text-align:center">
-  ![](./client/src/assets/reusabol-demo.gif)
-</span>
-
-
 ## Getting started
 
 1. Clone this repo and enter!
@@ -37,6 +24,8 @@ Twitch Bits are effectively mini-donations from viewers. They pay for them using
    ```bash
    npm install
    npm start
+
+   http://localhost:5000/
    ```
 
 
